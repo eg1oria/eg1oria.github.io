@@ -1,0 +1,105 @@
+.custom-input {
+    position: relative;
+    display: flex;
+}
+
+.custom-input--textaria {
+    min-height: 118px;
+}
+
+.custom-input--textaria:not(:last-child) {
+    margin: 0 0 40px 0;
+}
+
+.custom-input__label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.custom-input__icon {
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
+    pointer-events: none;
+    gap: 12px;
+    display: flex;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.custom-input__field--error, .custom-input__icon {
+    color: #FF7575;
+}
+
+.custom-input__field--error + .custom-input__label{
+    color: #FF7575;
+}
+
+.custom-input__field {
+    padding: 34px 20px 12px 20px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.custom-input__field:hover + .custom-input__label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.custom-input__field:focus + .custom-input__label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.custom-input__field--error {
+    background-color: rgba(255, 117, 117, 0.15);
+}
+
+.custom-input__error {
+    color: #FF7575;
+    /* display: none; */
+    font-size: 12px;
+    line-height: 16px;
+    margin: 8px 0 0 0;
+    position: absolute;
+    bottom: -20px;
+    left: 5px;
+}
+
+.custom-input__field:hover {
+    background-color: rgba(111, 181, 130, 0.15);
+}
+
+.custom-input__field:focus {
+    outline: none;
+    background-color: rgba(111, 181, 130, 0.15);
+}
+
+.custom-input__field:hover ~ .custom-input__icon {
+    color: #87F29A;
+}
+
+
+.custom-input__field[disabled] {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.custom-input__field[disabled] + .custom-input__icon {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.custom-input__field[disabled] + .custom-input .custom-input__label {
+    color: rgba(255, 255, 255, 0.4);
+}
+

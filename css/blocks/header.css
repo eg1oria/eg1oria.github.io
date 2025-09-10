@@ -1,6 +1,7 @@
 .header {
   position: relative;
   overflow: hidden;
+  margin: 0 0 80px 0;
 }
 
 .header__anim {
@@ -33,7 +34,7 @@
 }
 
 .header__cube {
-  background-color: #000000;
+  background-color: #121C25;
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -90,15 +91,15 @@
 }
 
 .header__text {
-  background-color: #000000;
+  background-color: #121C25;
   width: 580px;
-  padding: 20px 0;
+  padding: 172px 0 20px;
   position: relative;
 }
 
 .header__title-wrap {
   overflow: hidden;
-  margin: 0 0 16px 0;
+  margin: 0 0 24px 0;
 }
 
 .header__title {
@@ -138,10 +139,9 @@
   align-items: center;
   width: 64px;
   height: 64px;
+  background-color: #87F29A;
+  border-radius: 50%;
   padding: 0;
-  background-color: rgba(135, 242, 154, 1);
   border: none;
   cursor: pointer;
-  border-radius: 36px;
-  z-index: 10;
 }

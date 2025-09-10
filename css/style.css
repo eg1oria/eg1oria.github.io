@@ -11,10 +11,12 @@
 @import "blocks/animation.css";
 @import "blocks/footer.css";
 @import "blocks/socials.css";
+@import "blocks/order.css";
+@import "blocks/order-form.css";
+@import "blocks/custom-input.css";
+@import "blocks/custom-checkbox.css";
+@import "blocks/custom.radio.css";
+@import "blocks/pay.css";
+@import "blocks/order-card.css";
 @import "blocks/btn.css";
-@import "blocks/checkbox.css";
-@import "blocks/radio.css";
-@import "blocks/survey.css";
-@import "blocks/contacts.css";
-@import "blocks/details.css";
-
+@import "blocks/info-modal.css";

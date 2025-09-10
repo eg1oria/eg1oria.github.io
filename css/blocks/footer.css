@@ -24,22 +24,12 @@
 
 .footer__copyright-icon {
   flex-shrink: 0;
-  animation: copyright 2s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
 .footer__copyright-text {
   font-size: 12px;
   line-height: 14px;
   color: rgba(255, 255, 255, 0.5);
-}
-
-@keyframes copyright {
-  0% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(180deg);
-  }
 }
 

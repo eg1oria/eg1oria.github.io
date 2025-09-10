@@ -18,3 +18,11 @@
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 8px;
 }
+
+.socials__link:hover {
+  border: 1px solid #87F29A;
+}
+
+.socials__link:hover .socials__icon {
+   color: #87F29A;
+}
