@@ -1,6 +1,0 @@
-.order-form__pay-list {
-    display: grid;
-    grid-template-columns: 382px 1fr 1fr 1fr;
-    gap: 12px;
-    margin: 0 0 40px 0;
-}
