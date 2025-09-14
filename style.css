@@ -195,7 +195,7 @@ ul {
 }
 
 @keyframes move {
-  10% {
+  1% {
     left: -140px;
     transform: scaleX(1); /* обычное направление */
   }
@@ -215,7 +215,7 @@ ul {
     left: -80px;
     transform: scaleX(-1);
   }
-  100% {
+  95% {
     left: -140px;
     transform: scaleX(1);
   }
