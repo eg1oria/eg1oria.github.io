@@ -362,6 +362,29 @@ ul {
   gap: 10px;
 }
 
+.walper {
+  position: fixed; /* всегда поверх */
+  top: 0;
+  left: 0;
+  width: 100vw; /* ширина окна */
+  height: 100vh; /* высота окна */
+  background-color: black;
+  z-index: 9999;
+  opacity: 1;
+  animation: opacity 2s linear alternate forwards;
+}
+
+@keyframes opacity {
+  10% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .finish {
   background: linear-gradient(135deg, #f9f9f9, #eceff1);
   padding: 60px 20px;
