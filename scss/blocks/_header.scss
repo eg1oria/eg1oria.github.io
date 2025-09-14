@@ -1,109 +1,168 @@
 .header {
-  padding: 11px 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
+    width: 100%;
+    position: fixed;
+    padding: 20px 0;
+    top: 0;
+    left: 0;
+    z-index: 100;
 
-  @include vp-767 {
-    padding: 0;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &__logo {
+        font-family: Jost, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #1d252d;
+        text-decoration: none;
+        margin: 0;
+        width: 142px;
+        height: 40px;
+    }
+
+    &__indrive-icon {
+        width: 142px;
+        height: 40px;
+        
+    }
+
+    &__left-col {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        z-index: 100;
+        background-color: #fff;
+    }
+
+    &__btn {
+        border: 1px solid #524a31;
+        border-radius: 25px;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 8px;
+        background-color: #A7E92F;
+        color: black;
+        z-index: 100;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #b0fc24;
+        }
+    }
+
+    &__menu-logo {
+        color: black;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 50px;
+    }
+
+    &__nav-link {
+        text-decoration: none;
+        color: #1d252d;
+    }
+
+    &__nav-item {
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        color: #1d252d;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    &__menu {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #525252c0;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 20px;
+        transition: display 1s linear;
+        opacity: 0;
+        transform: translateX(-100%);
+        pointer-events: none;
+        transition: all 0.4s ease;
+    }
+
+    &__menu-active {
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: auto;
+    }
+
+    &__road {
+        font-family: "Inter", sans-serif;
+        
+        color: #1d252d;
+        margin: 0;
+        display: flex;
+        align-items: end;
+        position: relative;
+    }
+
+    &__drive {
+        margin: 0;
+        padding: 0;
+        line-height: 0.5;
+        user-select: none;
+        color: #1d252d;
+        font-size: 24px;
+        margin: 0 0 5px 0;
+        opacity: 0;
+        animation: opacityMove 10s alternate ease-out;
+    }
+
+    &__car-logo {
+        position: absolute;
+        top: 2px;
+        left: -60px;
+
+        animation: move 10s alternate ease-out;
+    }
+
+    
+}
+
+@keyframes move {
+  from {
+    left: -140px;
   }
-
-  .container {
-    padding: 0 25px;
-    max-width: 1440px;
-
-    @include vp-1023 {
-      padding: 0 20px;
-    }
+  to {
+    left: 1100px;
   }
+}
 
-  &__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 210px 1fr;
-    gap: 30px;
-    align-items: center;
-
-    @include vp-1023 {
-      grid-template-columns: 1fr 150px 1fr;
-    }
-
-    @include vp-767 {
-      grid-template-columns: 1fr 130px 1fr;
-    }
+@keyframes opacityMove {
+  10%{
+    opacity: 1;
   }
-
-  &__burger {
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @include vp-1023 {
-      height: 40px;
-      width: 40px;
-    }
+  90%{
+    opacity: 1;
   }
-
-  &__logo {
-    display: flex;
-
-    svg {
-      height: 58px;
-      width: 210px;
-    }
-  }
-
-  &__user {
-    display: flex;
-    justify-content: flex-end;
-    gap: 24px;
-    align-items: center;
-  }
-
-  &__link {
-    width: 182px;
-    transition: background-color $transition-300;
-
-    @include vp-1023 {
-      width: 160px;
-    }
-
-    @include vp-767 {
-      display: none;
-    }
-
-    &:hover {
-      background-color: #a4b78f;
-    }
-  }
-
-  &__phone {
-    display: flex;
-    font-family: $ff-secondary;
-    line-height: 21.6px;
-    font-size: 16px;
-    color: $color-white;
-  }
-
-  &__phone-text {
-    @media (max-width: 1280px) {
-      display: none;
-    }
-  }
-
-  &__phone-icon {
-    display: none;
-
-    @media (max-width: 1280px) {
-      display: flex;
-      height: 24px;
-      width: 24px;
-    }
+  95% {
+    opacity: 0;
   }
 }
