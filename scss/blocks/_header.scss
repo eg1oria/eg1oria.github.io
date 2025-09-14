@@ -131,8 +131,6 @@
         color: #1d252d;
         font-size: 24px;
         margin: 0 0 5px 0;
-        opacity: 0;
-        animation: opacityMove 10s alternate ease-out;
     }
 
     &__car-logo {
@@ -140,29 +138,36 @@
         top: 2px;
         left: -60px;
 
-        animation: move 10s alternate ease-out;
+        animation: move 20s infinite;
     }
 
     
 }
 
 @keyframes move {
-  from {
-    left: -140px;
-  }
-  to {
-    left: 1100px;
-  }
-}
-
-@keyframes opacityMove {
   10%{
-    opacity: 1;
+    left: -140px;
+    transform: scaleX(1); /* обычное направление */
+  }
+  40%{
+    left: 1000px;
+    transform: scaleX(1);
+  }
+  45%{
+    left: 1100px;
+    transform: scaleX(-1); /* отзеркаливание, будто разворачивается */
+  }
+  50%{
+    left: 1100px;
+    transform: scaleX(-1);
   }
   90%{
-    opacity: 1;
+    left: -80px;
+    transform: scaleX(-1);
   }
-  95% {
-    opacity: 0;
+  98%{
+    left: -140px;
+    transform: scaleX(1);
   }
+
 }
