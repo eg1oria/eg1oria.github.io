@@ -1,0 +1,53 @@
+.categories {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include vp-1439 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px 24px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__link {
+    outline: none;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    &:hover {
+      color: $color-royal-blue;
+    }
+  }
+
+  &__button {
+    padding: 10px;
+      align-items: center;
+      width: 100%;
+      background-color: $color-solitude-1;
+      border: none;
+      border-radius: 8px;
+      color: $color-black-russian;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+}
