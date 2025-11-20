@@ -1,0 +1,25 @@
+.info-card__credits-label--special {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+.info-card__title--special {
+    color: rgba(255, 255, 255, 1);
+}
+
+.info-card__low-bid--special {
+    color: rgba(255, 255, 255, 1);
+    font-weight : 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.info-card__link--special {
+    color: rgba(71, 107, 240, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.info-card__credits-label--special {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+}

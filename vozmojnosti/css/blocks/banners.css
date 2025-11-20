@@ -1,0 +1,85 @@
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+ul.info-cards {
+  margin: 50px 0 0;
+  padding: 0;
+}
+
+.info-card {
+  background-color: rgba(231, 239, 255, 1);
+  border-radius: 12px;
+  padding: 32px;
+  list-style-type: none;
+  width: calc(50% - 16px);
+  display: flex;
+  height: 300px;
+}
+
+.info-card--card-two {
+  background-color: rgba(71, 107, 240, 1);
+}
+
+.info-card--card-three {
+  background-color: rgba(207, 246, 231, 1);
+}
+
+.info-card--card-four {
+  background-color: rgba(196, 231, 255, 1);
+}
+
+.info-card__credits-label {
+  border: 1px solid rgba(30, 34, 46, 0.5);
+  border-radius: 4px;
+  color: rgba(30, 34, 46, 0.5);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 14px;
+  margin: 0 0 12px;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 66px;
+}
+
+.info-card__title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.info-card__low-bid {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(30, 34, 46, 1);
+}
+
+.info-card__link {
+  font-weight: 500;
+  display: block;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  background-color: #476BF0;
+  border-radius: 8px;
+  text-align: center;
+  width: 140px;
+}
+
+.info-card__link-block {
+  margin: auto 0 0;
+}
+
+.info-card__info-block {
+  margin: 0 20px 0 0;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+}
